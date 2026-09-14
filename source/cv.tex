@@ -1,0 +1,120 @@
+% Template:     Professional-CV
+% Documento:    CV Julio Yáñez - prácticas profesionales
+% Versión:      4.1.7 (05/01/2026)
+% Codificación: UTF-8
+%
+% Autor template: Pablo Pizarro R. (pablo@ppizarror.com)
+% Manual template: [https://latex.ppizarror.com/professional-cv]
+% Licencia MIT:    [https://opensource.org/licenses/MIT]
+
+% CREACIÓN DEL DOCUMENTO
+\documentclass[
+	spanish, % Idioma: spanish, english, etc.
+	letterpaper
+]{article}
+
+% INFORMACIÓN DEL USUARIO
+\def\name {Julio Yáñez Tejada}
+\def\email {juyanez9@gmail.com}
+\def\phonenumber {+56 9 4417 3591}
+
+% Sin uso en el documento (requeridos por el template)
+\def\birthday {27}
+\def\birthmonth {Abril}
+\def\birthyear {2004}
+
+% IMPORTACIÓN DEL TEMPLATE
+\input{template}
+\usepackage{fontawesome5}
+
+% CONFIGURA EL HEADER
+\addheadermail{\email}
+\addheadertext{\phonenumber}
+\addheaderurl[\faIcon{github}\ github.com/blu2718]{https://github.com/blu2718}
+\addheaderurl[\faIcon{github}\ github.com/blu2718-uni]{https://github.com/blu2718-uni}
+\addheadernewline
+\addheaderurl[\faIcon{linkedin}\ linkedin.com/in/julio-yáñez-54b329419]{https://www.linkedin.com/in/julio-y\%C3\%A1\%C3\%B1ez-54b329419/}
+\addheadertext[map-marker-alt]{Santiago, Chile}
+% \addheaderlink[linkedin]{https://linkedin.com/in/TODO} % pendiente
+
+% INICIO DEL DOCUMENTO
+\begin{document}
+
+% CONFIGURACIONES DE PÁGINA
+\templatePagecfg
+
+% PÁRRAFO DE RESUMEN
+\begin{summarynocol}[none]%
+	\noindent Estudiante de Ingeniería Civil en Computación (Universidad de Chile, FCFM) con más de 3 años programando en Python, C/C++ y Bash. Mantengo un servidor Linux con más de 15 servicios en Docker y desarrollo herramientas propias con LLMs, además de práctica regular en programación competitiva. Busco práctica profesional en desarrollo de software o infraestructura, en equipos donde pueda aprender de código en producción. Disponible para práctica entre enero y febrero de 2027.
+\end{summarynocol}
+
+% EDUCACIÓN
+\begin{cvsblock}{Educación}
+	\begin{institution}[https://www.uchile.cl]{Universidad de Chile}{Santiago, Chile}
+		\institutionentry{Ingeniería Civil en Computación (FCFM)}{2023}{\present}{Plan común de ingeniería completado; especialización en Computación en curso.}
+		\institutionentrynodate{Cursos relevantes}{Sistemas Operativos, Redes, Administración de Sistemas Linux, Sistemas Embebidos y Sensores.}
+	\end{institution}
+
+	% PROVISORIO: completar nombre del colegio
+	\begin{institution}{Colegio Ingles San José}{Antofagasta, Chile}
+		\institutionentry{Enseñanza básica y media}{2010}{2022}{}
+	\end{institution}
+\end{cvsblock}
+
+% HABILIDADES
+% IDIOMAS
+\begin{cvsblock}{Idiomas}
+	\otherentry{}{Español (nativo), \textbf{Inglés (C1, certificado TOEFL)}}
+\end{cvsblock}
+
+\begin{cvsblock}{Conocimientos \& Habilidades}
+	\otherentry{Sistemas \& herramientas:}{Linux (avanzado), Docker (intermedio), Git (intermedio), Ollama (básico), \LaTeX}
+	\otherentry{Redes \& Infraestructura:}{DNS (intermedio), Cloudflare (DNS), Tailscale (intermedio), Nginx, TLS}
+	\otherentry{Programación:}{Python (intermedio), C/C++ (básico), SQL y Bash (básicos), HTML/CSS (básico)}
+	\otherentry{Programación competitiva (básica):}{Participación en un taller de Programación Competitiva en Codeforces (C++)}
+\end{cvsblock}
+
+% ---------------------------------------------------------------------------
+% CURRÍCULUM MAESTRO: contenido opcional para activar según la oferta
+% (cápsula DCC Feria Laboral 2026). Descomentar solo lo que aplique y
+% espejar las palabras clave de la publicación a la que postulas.
+% ---------------------------------------------------------------------------
+% \begin{cvsblock}{Información Académica}
+% 	\otherentry{PPA:}{5.8/7.0, con tendencia al alza los últimos semestres} % verificar número oficial
+% 	\otherentry{Otros cursos:}{Diseño y Análisis de Algoritmos, Ingeniería de Software, Bases de Datos, Lenguajes de Programación.}
+% 	\otherentry{Experiencia adicional:}{Taller de programación competitiva (CC4006); módulo interdisciplinario de IA en proyectos de industria.}
+% \end{cvsblock}
+
+% PROYECTOS
+\begin{cvsblock}{Proyectos}
+	\begin{institution}[https://github.com/blu2718/homelab]{Homelab -- servidor Linux autoalojado}{Proyecto personal}
+		\institutionentry{Administración de sistemas}{2026}{\present}{Servidor Linux personal, desplegado en Proxmox VE, con más de 15 servicios en contenedores Docker, usando Docker Compose: DNS, archivos, streaming de video y buscador privado; acceso remoto vía Tailscale.}
+		\institutionentrynodate{Configuración y operación}{Infraestructura modular con monitoreo de salud de los servicios, control de permisos de usuarios y almacenamiento en múltiples discos.}
+	\end{institution}
+
+	\begin{institution}[https://github.com/blu2718/not-cr]{not-cr -- OCR con LLMs de visión}{Proyecto personal}
+		\institutionentry{Herramienta CLI en Python}{2026}{\present}{Convierte PDFs e imágenes escaneadas en texto editable preservando la estructura del documento, usando modelos disponibles en OpenRouter y OpenCode Go.}
+	\end{institution}
+
+	\begin{institution}{Astronomía Experimental (AS3201)}{Universidad de Chile}
+		\institutionentrynodate{Detección del tránsito del exoplaneta WASP-32b}{Con Pablo Miranda (otoño 2025). Procesamiento en Python de imágenes del observatorio La Silla (ESO) para detectar el paso del planeta frente a su estrella; coautor del reporte técnico en inglés.}
+	\end{institution}
+    
+    \begin{institution}{Programación Competitiva (CC4006)}{Universidad de Chile}
+        \institutionentrynodate{Taller de Programación Competitiva }{Práctica sostenida de algoritmos y estructuras de datos en C++ resolviendo problemas de jueces en línea.}
+    \end{institution}
+    
+	\begin{institution}{Actividades DCC (CC5002)}{Proyecto académico}
+		\institutionentrynodate{Desarrollo de aplicaciones web}{Webapp en HTML/CSS/JS y Python para gestionar actividades extracurriculares del DCC (otoño 2026). Proyecto de curso, no es un producto real.}
+	\end{institution}
+\end{cvsblock}
+
+% ACTIVIDADES EXTRAPROGRAMÁTICAS
+\begin{cvsblock}{Actividades extraprogramáticas}
+	\begin{institution}{Grupo de Cine de Ingeniería}{Universidad de Chile}
+		\institutionentry{Miembro de la directiva}{2025}{\present}{Partícipe de la organización de varias actividades, como proyecciones de películas, coordinación de las mismas con la universidad y participación en ferias universitarias.} % PROVISORIO: agregar rol específico, período y actividades
+	\end{institution}
+\end{cvsblock}
+
+% FIN DEL DOCUMENTO
+\end{document}
